@@ -71,8 +71,7 @@ with mp_face_mesh.FaceMesh(min_detection_confidence=0.5,min_tracking_confidence=
         if activate == 1:                
           if (mouth_coord[1] - mouth_coord[0]) >= 15:
             cv2.putText(image,"Clicked",(250,150),cv2.FONT_HERSHEY_PLAIN,2,(255,0,0),5)
-            autopy.mouse.click()
-            time.sleep(1)
+            autopy.mouse.click(delay = 0.5)
           
       cv2.putText(image,F"Mode : {status} (spacebar to switch)",(10,25),cv2.FONT_HERSHEY_COMPLEX,1,(0,200,20),3)
       if activate == 1:
